@@ -30,6 +30,8 @@ extract() {
 
     cp -rP $tmp/lib/*/* $out 2>/dev/null \
       || cp -rP $tmp/lib32/* $out 2>/dev/null \
+      || cp -rP $tmp/usr/lib/x86_64-linux-gnu/* $out 2>/dev/null \
+      || cp -rP $tmp/usr/lib64/* $out 2>/dev/null \
       || cp -rP $tmp/usr/lib/*/* $out 2>/dev/null \
       || cp -rP $tmp/usr/lib/debug/lib/*/* $out 2>/dev/null \
       || cp -rP $tmp/usr/lib/debug/lib32/* $out 2>/dev/null \
